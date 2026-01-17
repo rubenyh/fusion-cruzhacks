@@ -7,6 +7,8 @@ Account_SID = os.getenv('Account_SID')
 Auth_Token = os.getenv('Auth_Token')
 phone_number = os.getenv('phone_number')
 
+
+
 client = Client(Account_SID, Auth_Token)
 def sendSms(to:str, body:str):
     message = client.messages.create(
