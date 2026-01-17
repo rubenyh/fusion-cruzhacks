@@ -21,3 +21,8 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "FastAPI backend running"}
+
+
+@app.get("/healtn")
+def sayHello():
+    return {"message":"testss"}
