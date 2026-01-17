@@ -3,3 +3,7 @@ uvicorn
 pydantic
 python-dotenv
 twilio
+opencv-python
+numpy
+ultralytics
+python-multipart
