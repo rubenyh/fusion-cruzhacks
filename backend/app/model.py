@@ -3,7 +3,7 @@ import numpy as np
 from ultralytics import YOLO
 
 class WasteDetector:
-    def __init__(self, model_path: str = "models/ocean_waste.pt", threshold: float = 0.5):
+    def __init__(self, model_path: str = "../models/ocean_waste.pt", threshold: float = 0.5):
         self.threshold = threshold
 
         try:
