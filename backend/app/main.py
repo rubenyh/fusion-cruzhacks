@@ -2,12 +2,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import SmsService
 from pydantic import BaseModel
-
+from app.routes import router
 
 app = FastAPI(title="Fusion")
-
-
-
 
 origins = [
     "*"
@@ -15,12 +12,13 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+app.include_router(router)
 
 class SmsRequest(BaseModel):
     to: str
